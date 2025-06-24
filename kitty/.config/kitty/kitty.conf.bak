@@ -11,14 +11,10 @@ include current-theme.conf
 #: individual font faces and even specify special fonts for particular
 #: characters.
 
-shell sh -c '[ -z "$TMUX" ] && (tmux attach-session || exec tmux new-session) || exec $SHELL'
-
-font_family      JetBrainsMono Nerd Font
-bold_font        auto
-italic_font      auto
-bold_italic_font auto
-background_opacity 0.8
-
+# font_family      monospace
+# bold_font        auto
+# italic_font      auto
+# bold_italic_font auto
 
 #: You can specify different fonts for the bold/italic/bold-italic
 #: variants. The easiest way to select fonts is to run the `kitten
@@ -29,7 +25,7 @@ background_opacity 0.8
 #: <https://sw.kovidgoyal.net/kitty/kittens/choose-fonts/#font-spec-
 #: syntax>.
 
- font_size 10.0
+# font_size 11.0
 
 #: Font size (in pts).
 
@@ -2792,11 +2788,3 @@ background_opacity 0.8
 #: }}}
 
 #: }}}
-
-
-# BEGIN_KITTY_FONTS
-font_family      family="JetBrainsMono Nerd Font"
-bold_font        auto
-italic_font      auto
-bold_italic_font auto
-# END_KITTY_FONTS

@@ -1,0 +1,21 @@
+-- return {
+--   "lervag/vimtex",
+--   config = function()
+--     vim.g.vimtex_view_method = "zathura"
+--     vim.keymap.set("n", "<leader>ch", "<plug>(vimtex-compile)", { silent = true })
+--     vim.keymap.set("n", "<leader>vv", "<plug>(vimtex-view)", { silent = true })
+--   end,
+-- }
+return {
+  "lervag/vimtex",
+  lazy = false, -- load immediately for LaTeX files
+  config = function()
+    vim.g.vimtex_view_method = "zathura" -- or "sioyek" if you prefer
+    vim.keymap.set("n", "<leader>ch", "<plug>(vimtex-compile)", { silent = true })
+    vim.keymap.set("n", "<leader>vv", "<plug>(vimtex-view)", { silent = true })
+    vim.g.vimtex_compiler_latexmk = {
+      aux_dir = "./.latexmk/aux",
+      out_dir = "./.latexmk/out",
+    }
+  end,
+}
