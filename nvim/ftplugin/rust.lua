@@ -1,0 +1,53 @@
+-- local lspconfig = require("lspconfig")
+-- local home = vim.env.HOME
+--
+-- -- Set up rust-analyzer with recommended settings
+-- lspconfig.rust_analyzer.setup({
+--   on_attach = function(client, bufnr)
+--     -- Enable inlay hints if supported
+--     if client.server_capabilities.inlayHintProvider then
+--       vim.lsp.buf.inlay_hint(bufnr, true)
+--     end
+--     -- Keymaps for Rust actions (optional)
+--     local opts = { noremap = true, silent = true, buffer = bufnr }
+--     vim.keymap.set("n", "<leader>rr", "<cmd>RustRun<CR>", opts)
+--     vim.keymap.set("n", "<leader>rt", "<cmd>RustTest<CR>", opts)
+--   end,
+--   settings = {
+--     ["rust-analyzer"] = {
+--       cargo = { allFeatures = true },
+--       checkOnSave = { command = "clippy" },
+--       inlayHints = { enable = true },
+--     },
+--   },
+-- })
+--
+-- -- Optional: Format on save
+-- vim.api.nvim_create_autocmd("BufWritePre", {
+--   pattern = "*.rs",
+--   callback = function()
+--     vim.lsp.buf.format({ async = false })
+--   end,
+-- })
+--
+-- local dap = require("dap")
+-- dap.adapters.codelldb = {
+--   type = "server",
+--   port = "${port}",
+--   executable = {
+--     command = home .. "/.local/share/nvim/mason/bin/codelldb",
+--     args = { "--port", "${port}" },
+--   },
+-- }
+-- dap.configurations.rust = {
+--   {
+--     name = "Launch",
+--     type = "codelldb",
+--     request = "launch",
+--     program = function()
+--       return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/target/debug/", "file")
+--     end,
+--     cwd = "${workspaceFolder}",
+--     stopOnEntry = false,
+--   },
+-- }

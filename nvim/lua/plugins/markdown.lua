@@ -1,9 +1,11 @@
 return {
-  "MeanderingProgrammer/render-markdown.nvim",
-  -- dependencies = { "nvim-treesitter/nvim-treesitter", "echasnovski/mini.nvim" }, -- if you use the mini.nvim suite
-  -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.icons' }, -- if you use standalone mini plugins
-  dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons" }, -- if you prefer nvim-web-devicons
-  ---@module 'render-markdown'
-  ---@type render.md.UserConfig
-  opts = {},
+  -- -- Enhanced Markdown syntax highlighting
+  -- { "preservim/vim-markdown", ft = "markdown" },
+  -- -- Checkbox/todo highlighting
+  -- { "dkarter/bullets.vim", ft = "markdown" },
+  -- -- Markdown preview (optional)
+  -- { "iamcco/markdown-preview.nvim", build = "cd app && npm install", ft = "markdown" },
+
+  -- "OXY2DEV/markview.nvim",
+  -- lazy = false,
 }

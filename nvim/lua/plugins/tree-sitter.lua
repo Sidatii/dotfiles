@@ -1,5 +1,6 @@
 return {
   "nvim-treesitter/nvim-treesitter",
+  dependencies = { "OXY2DEV/markview.nvim" },
   opts = {
     ensure_installed = {
       "bash",
@@ -16,8 +17,6 @@ return {
       "python",
       "query",
       "regex",
-      "tsx",
-      "typescript",
       "vim",
       "yaml",
     },
